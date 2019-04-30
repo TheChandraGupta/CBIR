@@ -21,9 +21,9 @@ class MyModel:
     
 	def __init__(self, model_pretrained):
 		K.clear_session()
-		'''self.model = self.load_model(self,data, model_pretrained=model_pretrained, 
+		self.model = self.load_model(self,data, model_pretrained=model_pretrained, 
 								target_size=target_size, n_classes=n_classes, batch=batch, epochs=epochs, 
-								baseMapNum=baseMapNum, weight_decay=weight_decay, decay=decay, lr=lr, loss = loss)'''
+								baseMapNum=baseMapNum, weight_decay=weight_decay, decay=decay, lr=lr, loss = loss)
 		self.model = keras.models.load_model(model_pretrained)
 		self.model._make_predict_function()
 		self.graph = tf.get_default_graph()
